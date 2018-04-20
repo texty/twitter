@@ -87,34 +87,31 @@ p {
 
 .header-container {
   background-size: cover;
-  background: url("./../img/zebra1.jpg") no-repeat;
+  background: url("./../img/test.jpg") no-repeat;
   background-size: cover;
   background-position: center; }
   .header-container h1 {
     text-align: left;
     font-size: 3.6em;
     letter-spacing: 0.03em;
-    line-height: 1.4;
-    color: white; }
+    line-height: 1.4; }
   .header-container h2 {
     font-size: 2.0em;
     margin-left: 10%; }
   .header-container p.subtitle {
-    color: white;
     width: auto;
     line-height: 1.7;
     margin-left: 0;
     font-size: 1.7em;
     font-weight: 300; }
   .header-container .credits {
-    color: white;
     line-height: 1.5em;
     font-weight: 300; }
     .header-container .credits h6 {
       font-size: 1.2em;
       line-height: 1.7; }
       .header-container .credits h6 b {
-        color: #ccc; }
+        color: #696969; }
     .header-container .credits span {
       font-weight: 700; }
     .header-container .credits.date {
@@ -128,7 +125,7 @@ p {
     padding: 20px;
     margin-top: 17vw;
     margin-bottom: 17vw;
-    background: rgba(50, 50, 50, 0.8); }
+    background: white; }
   .header-container .header-text {
     position: relative; }
   .header-container video {
