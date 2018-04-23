@@ -1,0 +1,55 @@
+$img_size: 20px;
+$list_width: 200px;
+
+
+#chart-interface-container {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+
+
+  .list-container {
+    position: relative;
+    height: 100%;
+    width: $list_width;
+
+
+    //float: left;
+    display: inline-block;
+
+    img {
+      width: $img_size;
+      height: $img_size;
+      margin-right: $img_size / 2;
+    }
+
+    .list-item {
+      cursor: pointer;
+      margin-bottom: $img_size / 2;
+    }
+
+    .list-item:hover span{
+      font-weight: 800;
+    }
+  }
+
+
+  /* to make scrollbars always visible */
+  .always-visible.ps > .ps__scrollbar-y-rail {
+    opacity: 0.6;
+  }
+
+  .chart-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: $list_width;
+    //float: right;
+    height: 100%;
+
+    img {
+      max-height: 100%;
+    }
+  }
+}
