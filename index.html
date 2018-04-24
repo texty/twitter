@@ -34,13 +34,12 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,italic&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=PT+Sans&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-
 </head>
 
 <body>
 <div class="container-fluid">
     <div class="row logo-buttons" style="width:100%; position: absolute">
-        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-8" style="padding-top: 19px">
+        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-8">
             <a href="http://texty.org.ua"><img class="img-responsive logo" src="img/logo.png" style="top: 19px; background: rgba(0,0,0,0.53)"></a>
         </div>
         <div class="col-xs-2 col-md-1">
@@ -54,14 +53,23 @@
     </div>
 </div>
 
-<div class="header-container" style="margin-bottom: 10vh">
+<div class="header-container">
+    <div class="container-fluid">
+        <div class="row no-gutters">
+            <div class="col-xs-12">
+                <img src="img/titul_twitter.jpg" alt="" style="width: 100%">
+                <h1 class="header-title">Твіттер-боти Медведчука та інших</h1>
+            </div>
+
+        </div>
+    </div>
+
     <div class="container">
         <div class="row">
-
             <div class="col-xs-12 col-md-8 col-lg-6 col-md-offset-2 col-lg-offset-3">
                 <div class="header">
                     <div class="header-text">
-                        <h1>Твіттер-боти Медведчука та інших</h1>
+                        <!--<h1>Твіттер-боти Медведчука та інших</h1>-->
                         <p class="subtitle">У кого з українських політиків, знаменитостей, інтернет-персонажів найбільше штучно створених підписників у Твіттері</p>
                         <div class="credits">
                             <h6>Автор: <b>Влад&nbsp;Герасименко</b></h6>
@@ -74,7 +82,7 @@
     </div>
 </div>
 
-<div class="container main-text" style="margin-top: 30vh">
+<div class="container main-text">
     <div class="row">
         <div class="col-xs-12 col-sm-10 col-lg-8 col-sm-offset-1 col-lg-offset-2">
             <p>Нещодавно New York Times <a href="https://www.nytimes.com/interactive/2018/01/27/technology/social-media-bots.html" target="_blank" class="dotted">опублікували</a> дослідження про те, як американські зірки купують штучних підписників – іншими словами, ботів – аби виглядати у Твіттері крутіше. Ми використали цю методологію, щоб дослідити Твіттер-прихильників українських політиків і знаменитостей</p>
@@ -241,8 +249,10 @@
             </div>
         </div>
     </div>
+</div>
 
-    <div class="row">
+<div class="container-fluid">
+    <div class="row-fluid">
         <div class="col-xs-12">
             <div id="chart-interface-container">
                 <div class="chart-container text-center">
@@ -255,12 +265,11 @@
             </div>
         </div>
     </div>
+</div>
 
+<div class="container">
     <div class="row">
         <div class="col-xs-12 col-sm-10 col-lg-8 col-sm-offset-1 col-lg-offset-2">
-
-
-            <p>.... Інтерфейс для перегляду всіх графіків ....</p>
 
             <p>Зазначимо, у більшості з наведених екаунтів ми не помітили значних “пакунків” ботів, яких використовують для імітації популярності.</p>
             -----
@@ -270,8 +279,6 @@
             <p>Список найпопулярніших екаунтів в Україні ми сформували на основі рейтингу <a href="https://www.socialbakers.com/statistics/twitter/profiles/ukraine/" target="_blank" class="dotted">сайту socialbakers</a></p>
         </div>
     </div>
-
-
 </div>
 
 
@@ -325,7 +332,8 @@
     <div id="footer-wraper" class="wraper">
         <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 col-md-3 col-sm-3 col-xs-12">
             <h4>&copy; 2018, Тексти.org.ua</h4>
-            <h4>Медія для розумних</h4>
+            <!--pathos mode off-->
+            <!--<h4>Медія для розумних</h4>-->
         </div>
         <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 col-md-3 col-sm-3 col-xs-3">
             <ul class="links">
@@ -380,8 +388,7 @@
                 Велике прохання ставити гіперпосилання в першому чи другому абзаці вашого матеріалу.
             </div>
         </div>
-
-</div>
+    </div>
 </footer>
 
 <script src="lib/jquery-2.1.4.min.js"></script>

@@ -28,7 +28,11 @@ $list_width: 200px;
       margin-bottom: $img_size / 2;
     }
 
-    .list-item:hover span{
+    .list-item:hover span {
+      font-weight: 800;
+    }
+
+    .list-item.active span {
       font-weight: 800;
     }
   }
@@ -50,6 +54,7 @@ $list_width: 200px;
 
     img {
       max-height: 100%;
+      max-width: 100%;
     }
   }
 }

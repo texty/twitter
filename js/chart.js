@@ -4,6 +4,7 @@ function twitterchart() {
         , height = 300
         , chart_margin = {left: 0, top: 40, right: 0, bottom: 15}
         , img
+        , item
         ;
 
 
@@ -18,12 +19,13 @@ function twitterchart() {
             d3.csv("data/replacements.csv", function(err, data) {
                 if (err) throw err;
                 
-                var item = list
+                item = list
                     .selectAll("div.list-item")
                     .data(data)
                     .enter()
                     .append("div")
-                    .attr("class", "list-item");
+                    .attr("class", "list-item")
+                    .classed("active", function(d,i){return i==0});
 
 
                 item.append("img")
@@ -39,18 +41,18 @@ function twitterchart() {
 
                 var active = data[0];
 
-
                 img = chart.append("img")
                     .attr("src", "data/charts/" + active.login.toLowerCase() + ".jpg");
 
-
                 item.on("click", activate);
                 
-            })
+            });
 
 
             function activate(d) {
                 img.attr("src", "data/charts/" + d.login.toLowerCase() + ".jpg");
+                item.classed("active", false);
+                d3.select(this).classed("active", true);
             }
 
 

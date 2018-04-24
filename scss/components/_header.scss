@@ -20,29 +20,41 @@
 .fa-facebook {
   //background-color:rgba(187, 189, 192, 0.9);
   padding: 5px;
-  color: #6c6c6c;
+  color: $main-text;
   background: white;
   float: right;
   margin: 5px 10px 0px 0px;
   cursor: pointer;
   &:hover{
-    color: #ffffff;
+    color: white;
+    background-color: $main-text;
   }
 }
 
-.header-container {
-  background-size: cover;
-  background: url("./../img/test.jpg") no-repeat;
-  //background-size: 100%;
-  background-size: cover;
-  background-position: center;
 
+
+.header-container {
+  //background-size: cover;
+  //background: url("../img/titul_twitter.jpg") no-repeat;
+  //background-size: 100%;
+  //background-position: center;
+
+  h1.header-title {
+    position: absolute;
+    text-align: left;
+    right: 0;
+    top: 10px;
+    color: $main-text;
+    max-width: 40%;
+    line-height: 1.6;
+    font-size: 2.9vw;
+    margin-top: 35px;
+    letter-spacing: 0.03em;
+  }
 
   h1 {
-    text-align: left;
-    font-size: 3.6em;
-    letter-spacing: 0.03em;
-    line-height: 1.4;
+    //font-size: 3.6em;
+    //line-height: 1.4;
     //color: white;
 
     //margin-top: 5vw;
@@ -72,7 +84,7 @@
     line-height: 1.7;
     margin-left: 0;
     //padding-top: 2vw;
-    font-size: 1.7em;
+    font-size: 2.7em;
     font-weight: 300;
     //padding-bottom: 200px;
     //margin-top: 19vw;
@@ -99,7 +111,7 @@
       line-height: 1.7;
 
       b {
-        color: #696969;
+        color: $main-text;
       }
     }
 
@@ -124,8 +136,9 @@
     width: 100%;
     bottom: 0;
     padding: 20px;
-    margin-top: 17vw;
-    margin-bottom: 17vw;
+    //margin-top: 17vw;
+    margin-top: 100px;
+    margin-bottom: 100px;
     background: white;
 
 
