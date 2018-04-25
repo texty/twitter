@@ -193,14 +193,15 @@ p {
 
 #chart-interface-container {
   width: 100%;
-  position: relative; }
+  position: relative;
+  margin-bottom: 100px; }
   #chart-interface-container .card {
     width: 100px;
     height: 100px;
-    display: inline-block;
     overflow: hidden;
+    display: inline-block;
     cursor: pointer; }
-    #chart-interface-container .card:hover {
+    #chart-interface-container .card.bordered {
       border: 1px solid black; }
     #chart-interface-container .card img {
       padding: 10px;

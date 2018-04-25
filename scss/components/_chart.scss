@@ -3,6 +3,7 @@ $card_size: 100px;
 #chart-interface-container {
   width: 100%;
   position: relative;
+  margin-bottom: $card_size;
 
   .card {
     width: $card_size;
@@ -11,8 +12,12 @@ $card_size: 100px;
     overflow: hidden;
     display: inline-block;
     cursor: pointer;
+    //
+    //&:hover {
+    //  border: 1px solid black;
+    //}
 
-    &:hover {
+    &.bordered {
       border: 1px solid black;
     }
 
