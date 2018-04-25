@@ -39,18 +39,27 @@ function twitterchart() {
                     suppressScrollX: true
                 });
 
-                var active = data[0];
+                // var active = data[0];
 
-                img = chart.append("img")
-                    .attr("src", "data/charts/" + active.login.toLowerCase() + ".jpg");
+                img = chart.append("img");
+
+                img.on("load", function() {
+                    img.classed("hidden", false);
+                    chart.select(".whirlpool").classed("hidden", true)
+                });
+
+
+                list.select(".list-item").each(activate);
 
                 item.on("click", activate);
-                
             });
 
 
             function activate(d) {
+                img.classed("hidden", true);
                 img.attr("src", "data/charts/" + d.login.toLowerCase() + ".jpg");
+                chart.select(".whirlpool").classed("hidden", false);
+
                 item.classed("active", false);
                 d3.select(this).classed("active", true);
             }

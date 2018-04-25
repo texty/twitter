@@ -8,6 +8,7 @@
 @import "components/footer";
 @import "components/carousel";
 @import "components/chart";
+@import "components/whirlpool";
 
 body {
     height: 100vh;
@@ -66,7 +67,6 @@ p {
 .new-section {
   margin-top: 5%;
 }
-
 
 
 @media only screen and (min-width:800px) {
