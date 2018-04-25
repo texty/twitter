@@ -1,63 +1,60 @@
-$img_size: 20px;
-$list_width: 200px;
-
+$card_size: 100px;
 
 #chart-interface-container {
   width: 100%;
-  height: 90vh;
   position: relative;
 
+  .card {
+    width: $card_size;
+    height: $card_size;
 
-  .list-container {
-    position: relative;
-    height: 100%;
-    width: $list_width;
-
-
-    //float: left;
+    overflow: hidden;
     display: inline-block;
+    cursor: pointer;
+
+    &:hover {
+      border: 1px solid black;
+    }
 
     img {
-      width: $img_size;
-      height: $img_size;
-      margin-right: $img_size / 2;
-    }
-
-    .list-item {
-      cursor: pointer;
-      margin-bottom: $img_size / 2;
-    }
-
-    .list-item:hover span {
-      font-weight: 800;
-    }
-
-    .list-item.active span {
-      font-weight: 800;
+      padding: 10px;
+      width: 100%;
+      height: 100%;
     }
   }
 
-
-  /* to make scrollbars always visible */
-  .always-visible.ps > .ps__scrollbar-y-rail {
-    opacity: 0.6;
-  }
-
-  .chart-container {
+  .fixed-tooltip {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding-left: $list_width;
-    //float: right;
-    height: 100%;
 
-    img {
-      max-height: 100%;
-      max-width: 100%;
+    width: $card_size * 2;
+    height: $card_size;
+    background: white;
+    padding: 10px;
 
-      //object-fit: contain;
-      //object-position: 0 0;
+    &.bordered {
+      border: 1px dashed black;
+    }
+
+    &.bordered.tipleft {
+      border-right: none;
+    }
+
+    &.bordered.tipright {
+      border-left: none;
+    }
+
+    p {
+      margin: 0;
+      padding: 0;
+      line-height: 1;
+    }
+
+    p.first {
+      margin-bottom: 10px;
+    }
+
+    span {
+      font-size: 12px;
     }
   }
 }
