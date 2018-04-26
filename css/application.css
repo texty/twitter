@@ -227,6 +227,9 @@ p {
       margin-bottom: 10px; }
     #chart-interface-container .fixed-tooltip span {
       font-size: 12px; }
+  #chart-interface-container.touch p span.login {
+    color: #0CB3FF;
+    text-decoration: underline; }
 
 .whirlpool {
   width: 100px;

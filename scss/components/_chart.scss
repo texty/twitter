@@ -62,4 +62,13 @@ $card_size: 100px;
       font-size: 12px;
     }
   }
+
+  &.touch {
+    p {
+      span.login {
+        color: #0CB3FF;
+        text-decoration: underline;
+      }
+    }
+  }
 }

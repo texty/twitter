@@ -6,8 +6,10 @@ function twitterchart() {
             var proto = d3.format(",.0f");
             return function (v) { return proto(v).replace(/,/g, " ")}
         })()
+        , viewer
         ;
 
+    $(function() { viewer = ImageViewer() });
 
     function my(selection) {
         selection.each(function() {
@@ -30,9 +32,60 @@ function twitterchart() {
 
                 var tooltip = container.select(".fixed-tooltip");
 
-                card.on("mouseenter touchstart", function(d) {
-                    card.classed("bordered", false);
+                var activeCard;
 
+                card
+                    .on("mouseenter", mouseenter)
+                    .on("touchstart", function(d) {
+                        // dirty hack for touch devices:
+                        //       do all the same as on mouseenter
+                        //       but also count number of touchstart events.
+                        //       And it's a good moment to reset counter for all other elements
+                        var touchstart_counter = d.touchstart_counter;
+                        card.each(function(d) {delete d.touchstart_counter});
+
+                        if (!touchstart_counter) d.touchstart_counter = 1;
+                        else d.touchstart_counter = touchstart_counter + 1;
+                        // dirty hack end
+
+                        container.classed("touch", true);
+
+                        // now do the same as on mouseenter
+                        mouseenter.call(this, d);
+                    })
+                        
+                    .on("mouseleave", function(d) {
+                        // dirty hack for touch devices:
+                        //       do not trigger dummy mouseleave for touch devices
+                        if (d.touchstart_counter) return;
+                        // dirty hack end;
+
+                        tooltip.classed("hidden", true);
+                        d3.select(this).classed("bordered", false);
+                    })
+
+                    .on("click", function(d) {
+                        // dirty hack for touch devices:
+                        //       open full screen image only on second touch;
+                        if (d.touchstart_counter && d.touchstart_counter < 2) return;
+                        // dirty hack end;
+
+                        viewer.hide();
+                        viewer.show("data/charts/" + d.login.toLowerCase() + ".jpg");
+                    });
+
+                tooltip.on("click", function() {
+                    d3.select(activeCard)
+                        .each(function(d) {
+                            viewer.hide();
+                            viewer.show("data/charts/" + d.login.toLowerCase() + ".jpg");
+                        })
+                });
+
+                function mouseenter(d) {
+                    activeCard = this;
+                    
+                    card.classed("bordered", false);
                     d3.select(this).classed("bordered", true);
 
                     var rect = this.getBoundingClientRect();
@@ -60,12 +113,7 @@ function twitterchart() {
                         .classed("hidden", false);
 
                     updateTooltip(d);
-                })
-                .on("mouseleave", function(d) {
-                    tooltip.classed("hidden", true);
-                    d3.select(this).classed("bordered", false);
-
-                });
+                }
 
                 function updateTooltip(d) {
                     tooltip.select("span.name").text(d.chart_name);
