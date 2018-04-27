@@ -249,59 +249,6 @@ input#chart-search-box[type=text] {
 input#chart-search-box[type=text]:focus {
   min-width: 500px; }
 
-.whirlpool {
-  width: 100px;
-  height: 100px;
-  margin: auto auto;
-  margin-top: 25vh;
-  position: relative; }
-  .whirlpool .ring:before {
-    content: '';
-    border-radius: 50%;
-    border: 1px solid #32CCFE;
-    height: 30px;
-    width: 100px;
-    position: absolute; }
-  .whirlpool .ring1:before {
-    left: 40px;
-    width: 20px;
-    top: 12px;
-    height: 6px;
-    animation: 2.5s ease 0s infinite spinner; }
-  .whirlpool .ring2:before {
-    left: 35px;
-    width: 30px;
-    top: 10.5px;
-    height: 9px;
-    animation: 2.5s ease 0.1s infinite spinner; }
-  .whirlpool .ring3:before {
-    left: 30px;
-    width: 40px;
-    top: 9px;
-    height: 12px;
-    animation: 2.5s ease 0.2s infinite spinner; }
-  .whirlpool .ring4:before {
-    left: 25px;
-    width: 50px;
-    top: 7.5px;
-    height: 15px;
-    animation: 2.5s ease 0.3s infinite spinner; }
-  .whirlpool .ring5:before {
-    left: 20px;
-    width: 60px;
-    top: 6px;
-    height: 18px;
-    animation: 2.5s ease 0.4s infinite spinner; }
-@keyframes spinner {
-  0% {
-    transform: translateY(10px);
-    animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955); }
-  50% {
-    transform: translateY(60px);
-    animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955); }
-  100% {
-    transform: translateY(10px);
-    animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955); } }
 body {
   height: 100vh;
   margin-top: 0;
@@ -437,6 +384,8 @@ h2 span {
   .figure .figcaption {
     text-align: center;
     font-size: 1em; }
+  .figure.clickable img {
+    cursor: pointer; }
 
 .social-icons {
   right: 55px; }

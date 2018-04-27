@@ -6,9 +6,7 @@
 @import "base/base";
 @import "components/header";
 @import "components/footer";
-@import "components/carousel";
 @import "components/chart";
-@import "components/whirlpool";
 
 body {
     height: 100vh;
@@ -224,7 +222,6 @@ h2 span {
 .figure {
   margin-bottom: 5em;
 
-
   img {
     max-width: 100%;
     max-height: 100vh;
@@ -234,7 +231,19 @@ h2 span {
     text-align: center;
     font-size: 1em;
   }
+
+  &.clickable {
+    img {
+      cursor: pointer;
+    }
+  }
 }
+
+
+
+
+
+
 
 .social-icons {
   right: 55px;
@@ -257,3 +266,5 @@ h2 span {
 //
 //  width: 202px;
 //}
+
+
