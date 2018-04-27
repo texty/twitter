@@ -231,6 +231,24 @@ p {
     color: #0CB3FF;
     text-decoration: underline; }
 
+input#chart-search-box[type=text] {
+  min-width: 200px;
+  -webkit-transition: min-width 0.4s ease-in-out;
+  transition: min-width 0.4s ease-in-out;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url("../img/searchicon.png");
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px; }
+
+/* When the input field gets focus, change its width to 100% */
+input#chart-search-box[type=text]:focus {
+  min-width: 500px; }
+
 .whirlpool {
   width: 100px;
   height: 100px;
