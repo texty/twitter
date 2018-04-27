@@ -243,7 +243,10 @@ input#chart-search-box[type=text] {
   background-image: url("../img/searchicon.png");
   background-position: 10px 12px;
   background-repeat: no-repeat;
+  background-size: 22px;
   padding: 12px 20px 12px 40px; }
+  input#chart-search-box[type=text].not-found {
+    background-color: #ffc1c1; }
 
 /* When the input field gets focus, change its width to 100% */
 input#chart-search-box[type=text]:focus {

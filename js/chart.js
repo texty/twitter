@@ -96,6 +96,19 @@ function twitterchart() {
                         })
                 });
 
+                my.filter = function (term) {
+                    term = normalize(term);
+
+                    function _filter (d) {
+                        return normalize(d.login).indexOf(term) >= 0
+                            || normalize(d.chart_name).indexOf(term) >= 0
+                            || normalize(d.profile_name).indexOf(term) >= 0
+                    }
+                    
+                    card.classed("hidden", function(d){return !_filter(d)});
+                };
+                
+
                 function mouseenter(d) {
                     activeCard = this;
                     
@@ -141,6 +154,11 @@ function twitterchart() {
     function inpx(value) {
         return value + "px";
     }
+    
+    function normalize(str) {
+        if (!str) return "";
+        return str.trim().toLowerCase().replace(/\s+/g, " ");
+    } 
 
     return my;
 }
