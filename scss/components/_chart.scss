@@ -74,9 +74,9 @@ $card_size: 100px;
 }
 
 input#chart-search-box[type=text] {
-  min-width: 200px;
-  -webkit-transition: min-width 0.4s ease-in-out;
-  transition: min-width 0.4s ease-in-out;
+  width: 100%;
+  //-webkit-transition: min-width 0.4s ease-in-out;
+  //transition: min-width 0.4s ease-in-out;
 
   box-sizing: border-box;
   border: 2px solid #ccc;
@@ -93,10 +93,11 @@ input#chart-search-box[type=text] {
     background-color: #ffc1c1;
   }
 
+  margin-top: 20px;
 }
 
-/* When the input field gets focus, change its width to 100% */
-input#chart-search-box[type=text]:focus {
-  min-width: 500px;
-}
+///* When the input field gets focus, change its width to 100% */
+//input#chart-search-box[type=text]:focus {
+//  min-width: 500px;
+//}
 
