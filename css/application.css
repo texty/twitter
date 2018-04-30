@@ -64,8 +64,8 @@ p {
 .logo {
   position: fixed;
   float: left;
-  margin: 15px 0px 0px 15px;
-  z-index: 1000; }
+  z-index: 1000;
+  margin: 0 0px 0px 15px; }
 
 .social-icons {
   position: fixed;
@@ -77,13 +77,13 @@ p {
 .fa-facebook {
   padding: 5px;
   color: #012233;
-  background: white;
+  background: #32CCFE;
   float: right;
   margin: 5px 10px 0px 0px;
   cursor: pointer; }
   .fa-twitter:hover,
   .fa-facebook:hover {
-    color: white;
+    color: #32CCFE;
     background-color: #012233; }
 
 .header-container h1.header-title {
@@ -97,6 +97,14 @@ p {
   font-size: 2.9vw;
   margin-top: 35px;
   letter-spacing: 0.03em; }
+.header-container .mobile h1.header-title {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  font-size: 6vw;
+  margin-top: 40px;
+  padding-top: 5vw;
+  padding-left: 10px; }
 .header-container h2 {
   font-size: 2.0em;
   margin-left: 10%; }
@@ -375,9 +383,6 @@ h2 span {
     margin: 0 auto; }
   .figure.clickable img {
     cursor: pointer; }
-
-.social-icons {
-  right: 55px; }
 
 .mobile .header {
   box-shadow: 0 0 70px 70px rgba(50, 50, 50, 0.8); }

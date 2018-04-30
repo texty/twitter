@@ -2,11 +2,10 @@
 
 
 .logo {
-    //background-color: rgba(255, 255, 255, 0.9);
     position: fixed;
     float: left;
-    margin: 15px 0px 0px 15px;
     z-index: 1000;
+    margin: 0 0px 0px 15px;
 }
 
 .social-icons {
@@ -18,26 +17,20 @@
 
 .fa-twitter,
 .fa-facebook {
-  //background-color:rgba(187, 189, 192, 0.9);
   padding: 5px;
   color: $main-text;
-  background: white;
+  background: #32CCFE;
   float: right;
   margin: 5px 10px 0px 0px;
   cursor: pointer;
   &:hover{
-    color: white;
+    color: #32CCFE;
     background-color: $main-text;
   }
 }
 
 
-
 .header-container {
-  //background-size: cover;
-  //background: url("../img/titul_twitter.jpg") no-repeat;
-  //background-size: 100%;
-  //background-position: center;
 
   h1.header-title {
     position: absolute;
@@ -52,26 +45,17 @@
     letter-spacing: 0.03em;
   }
 
-  h1 {
-    //font-size: 3.6em;
-    //line-height: 1.4;
-    //color: white;
+  .mobile h1.header-title {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    font-size: 6vw;
 
-    //margin-top: 5vw;
+    margin-top: 40px;
 
-    //@media #{$brk-medium} {
-    //  margin-top: 20vw;
-    //}
-    //
-    //@media #{$brk-narrow} {
-    //  margin-top: 22vw;
-    //}
-    //
-    //@media #{$brk-spnarrow} {
-    //  margin-top: 8vw;
-    //}
+    padding-top: 5vw;
+    padding-left: 10px;
   }
-
 
   h2 {
     font-size: 2.0em;
@@ -79,32 +63,17 @@
   }
 
   p.subtitle {
-    //color: white;
+
     width: auto;
     line-height: 1.7;
     margin-left: 0;
-    //padding-top: 2vw;
+
     font-size: 2.7em;
     font-weight: 300;
-    //padding-bottom: 200px;
-    //margin-top: 19vw;
-
-    //@media #{$brk-medium} {
-    //  margin-top: 20vw;
-    //}
-    //
-    //@media #{$brk-narrow} {
-    //  margin-top: 22vw;
-    //}
-    //
-    //@media #{$brk-spnarrow} {
-    //  margin-top: 8vw;
-    //}
   }
 
 
   .credits {
-    //color: white;
 
     h6 {
       font-size: 1.2em;
@@ -114,9 +83,6 @@
         color: $main-text;
       }
     }
-
-    //padding-bottom: 150px;
-
 
     line-height: 1.5em;
     font-weight: 300;
@@ -136,58 +102,13 @@
     width: 100%;
     bottom: 0;
     padding: 20px;
-    //margin-top: 17vw;
     margin-top: 100px;
     margin-bottom: 100px;
-    background: white;
-
-
-    //margin-top: -37vw;
-
-    //@media #{$brk-spnarrow} {
-    //  margin-top: -2vw;
-    //}
-  }
-
-  @media (min-width: 1281px) {
-    .header {
-      //background-color: #f0f0f0;
-      //height: 450px;
-    }
-
-  }
-
-  @media (min-width: 768px) and (max-width: 1280px) {
-    .header {
-      //background-color: #f0f0f0;
-
-    }
-  }
-
-  @media (min-width: 320px) and (max-width: 767px) {
-    .mobheader {
-      //margin-top: -7%;
-    }
-  }
-
-
-  @media (max-width: 800px) {
-    //  #header-text {
-    //
-    //    margin-left: 8%;
-    //    margin-right: 2%;
-    //    top: 12%;}
-    //
-    //    h3 {
-    //      padding-top: 10px;
-    //    }
+    background: white
   }
 
   .header-text {
     position: relative;
-    //margin-left: 12%;
-    //margin-right: 10%;
-    //margin-top: 80px;
   }
 
   video {
