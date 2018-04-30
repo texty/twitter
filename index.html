@@ -31,6 +31,7 @@
     <!-- Custom Fonts -->
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/imageviewer.css" />
+    <!--<link rel="stylesheet" href="css/tippy.css" />-->
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,italic&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=PT+Sans&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
@@ -85,7 +86,7 @@
 <div class="container main-text">
     <div class="row">
         <div class="col-xs-12 col-sm-10 col-lg-8 col-sm-offset-1 col-lg-offset-2">
-            <p>Нещодавно New York Times <a href="https://www.nytimes.com/interactive/2018/01/27/technology/social-media-bots.html" target="_blank" class="dotted">опублікували</a> дослідження про те, як американські зірки купують штучних підписників – іншими словами, ботів – аби виглядати у Твіттері крутіше. Ми використали цю методологію, щоб дослідити Твіттер-прихильників українських політиків і знаменитостей</p>
+            <p>Нещодавно New York Times <a href="https://www.nytimes.com/interactive/2018/01/27/technology/social-media-bots.html" target="_blank" class="dotted">опублікували</a> дослідження про те, як американські зірки купують штучних підписників – іншими словами, <span class="term" data-template-ref="bot">ботів</span> – аби виглядати у Твіттері крутіше. Ми використали цю методологію, щоб дослідити Твіттер-прихильників українських політиків і знаменитостей</p>
             <h3>Як помітити фейкових підписників?</h3>
         </div>
     </div>
@@ -112,7 +113,16 @@
 <div class="container main-text">
     <div class="row">
         <div class="col-xs-12 col-sm-10 col-lg-8 col-sm-offset-1 col-lg-offset-2">
-            <p>На графіках вище кожен фоловер Авакова чи Медведчука показаний у вигляді точки. Якщо на графіку точки розміщуються більш-менш рівномірно, то це свідчить про природній процес росту фоловерів (приклад – графік Авакова). Різко виділені горизонтальні смужки означають, що на екаунт одночасно підписався цілий «пакунок» користувачів із однаковими датами реєстрації. Майже напевне це – боти, і їх ми бачимо в Медведчука. Серед політиків лише у нього переважна більшість підписників – боти. Але це не сенсація – про дуту популярність Медведчука у медіа <a href="http://texty.org.ua/d/medvedchuk/ " target="_blank" class="dotted">ми вже писали раніше</a>.</p>
+            <p>На графіках вище кожен фоловер Авакова чи Медведчука показаний у вигляді точки. Якщо на графіку точки розміщуються більш-менш рівномірно, то це свідчить про природній процес росту <span class="term" data-template-ref="follower">фоловерів</span> (приклад – графік Авакова). Різко виділені горизонтальні смужки означають, що на <span class="term" data-template-ref="account">екаунт</span> одночасно підписався цілий «пакунок» користувачів із однаковими датами реєстрації. Майже напевне це – боти, і їх ми бачимо в Медведчука. Серед політиків лише у нього переважна більшість підписників – боти. Але це не сенсація – про дуту популярність Медведчука у медіа <a href="http://texty.org.ua/d/medvedchuk/ " target="_blank" class="dotted">ми вже писали раніше</a>.</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="figure clickable text-center">
+                <img src="img/medvedchukvv.jpg" alt="Червоні точки – підписники-боти @awentos-а">
+                <p class="figcaption">Графік підписників <a href="https://twitter.com/medvedchukvv/" target="_blank" class="dotted">Медведчука</a>. Одна точка – один фоловер. Чіткі патерни присутні по всій площі графіка</p>
+            </div>
         </div>
     </div>
 
@@ -187,16 +197,17 @@
     <div class="row">
         <div class="col-xs-12 col-sm-10 col-lg-8 col-sm-offset-1 col-lg-offset-2">
             <p>Точки на його графіку розсіюються випадково, тобто показують природний процес збільшення фоловерів, за винятком кількох ділянок. </p>
-            <p>Що може такого статись, щоб впродовж кількох днів на вашу сторінку підписувались тільки екаунти, зареєстровані в далекому 2012 році? Відповідь: швидше за все  –  це боти, створені в тому році “пакунком”. Всі вони майже одночасно почали фоловити Чмерковського в середині 2014 року, таким чином за короткий момент часу збільшивши кількість його підписників приблизно на 40 тисяч. Цілком очікувано, ці підписники виявились також підписниками ботовода awentos-а. Ми їх позначили червоним кольором. </p>
+            <p>Що може такого статись, щоб впродовж кількох днів на вашу сторінку підписувались тільки екаунти, зареєстровані в далекому 2012 році? Відповідь: швидше за все  –  це боти, створені в тому році “пакунком”. Всі вони майже одночасно почали <span class="term" data-template-ref="to-follow">фоловити</span> Чмерковського в середині 2014 року, таким чином за короткий момент часу збільшивши кількість його підписників приблизно на 40 тисяч. Цілком очікувано, ці підписники виявились також підписниками ботовода awentos-а. Ми їх позначили червоним кольором. </p>
             <p>Натомість, вертикальні однорідні лінії можна пояснити хвилями популярності, які призводили до раптового росту кількості підписників із різними датами реєстрації.</p>
 
-            <p>Нижче дивіться на графіки інших популярних Твіттер-екаунтів: від Юлії Тимошенко - до Насті Каменських, від Святаслова Вакарчука – до Петра Порошенка. Для того, щоб було легше читати, спочатку подивіться інструкцію. </p>
+            <p>Нижче дивіться на графіки інших популярних Твіттер-екаунтів: від Юлії Тимошенко - до Насті Каменських, від Святаслова Вакарчука – до Петра Порошенка.
+                Читати графіки допоможе просте правило: патерни на картинці свідчать про ботів серед підписників. Щоб зрозуміти більше, спочатку подивіться інструкцію: </p>
         </div>
     </div>
 
     <div class="row">
         <div class="col-xs-12">
-            <div class="figure clickable text-center" style="margin-top: 150px;">
+            <div class="figure clickable text-center" style="margin-top: 100px;">
                 <img src="img/how_to_read.jpg" alt="Як читати графік">
             </div>
         </div>
@@ -246,7 +257,7 @@
             <div id="mc_embed_signup" style="margin-top: 50px; margin-bottom: 50px; background-color: rgba(0, 0, 0, 0);">
                 <form action="//texty.us2.list-manage.com/subscribe/post?u=6a4d05e311e165b44ca8ccb21&amp;id=7eccc55fe8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                     <div id="mc_embed_signup_scroll">
-                        <label for="mce-EMAIL">Будь ласка, підпишіться на анонси наших наступних проектів (~два повідомлення на місяць)</label>
+                        <label for="mce-EMAIL">Підпишіться на анонси наших наступних проектів (~два повідомлення на місяць)</label>
                         <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="ваш email" required>
                         <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                         <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_6a4d05e311e165b44ca8ccb21_7eccc55fe8" tabindex="-1" value=""></div>
@@ -262,7 +273,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-10 col-md-8 col-lg-8 col-sm-offset-1 col-md-offset-2 col-lg-offset-2">
-                <h5 class="pointer" data-toggle="collapse" data-target=".disclaimer-hidden">Додаткова інформація</h5>
+                <h5 class="pointer" data-toggle="collapse" data-target=".disclaimer-hidden">Додаткова інформація +</h5>
             </div>
         </div>
     </div>
@@ -271,15 +282,17 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-10 col-md-8 col-lg-8 col-sm-offset-1 col-md-offset-2 col-lg-offset-2">
-                    <div style="max-width: 570px; margin: 0 auto">
+                    <div>
                         <p>цей розділ не завершений</p>
 
                         <h5>Якщо на графіку немає патернів, значить немає ботів?</h5>
                         <p>Скоріше за все, але не точно. Можна “накручувати” підписників за допомогою зламаних екаунтів. В такому випадку патернів на графіку не буде.</p>
                         <h5>Чому ви перевірили не всі українські сторінки?</h5>
-                        <p>Список найпопулярніших українських твіттер блогів ми сформували на основі <a href="https://www.socialbakers.com/statistics/twitter/profiles/ukraine/" target="_blank" class="dotted">рейтингу сайту socialbakers</a>. Також ми додали у список відомі нам сторінки. Якщо ви знаєте кого ми пропустили - пишіть нам</p>
+                        <p>Список найпопулярніших українських твіттер блогів ми сформували на основі <a href="https://www.socialbakers.com/statistics/twitter/profiles/ukraine/" target="_blank" class="dotted">рейтингу сайту socialbakers</a>. Також ми додали у список відомі нам сторінки. Якщо ви знаєте кого ми пропустили – пишіть нам у фейсбук
+                            <a href="http://facebook.com/texty.org.ua/" target="_blank" class="dotted">фейсбук</a> або на електронну пошту
+                            <a href="mailto:texty.org.ua@gmail.com" target="_blank" class="dotted">texty.org.ua@gmail.com</a> </p>
                         <h5>Я вмію програмувати і хочу зробити те саме</h5>
-                        <p>Код для завантаження інформації із твіттера і створення графіків ми взяли з <a href="https://rinzewind.org/blog-en/2018/replicating-the-new-york-times-bot-twitter-analysis-with-r-and-python.html" target="_blank" class="dotted">блогу José María Mateos</a></p>
+                        <p>Для завантаження інформації із твіттера та створення графіків ми використали код із <a href="https://rinzewind.org/blog-en/2018/replicating-the-new-york-times-bot-twitter-analysis-with-r-and-python.html" target="_blank" class="dotted">блогу José María Mateos</a></p>
                     </div>
                 </div>
             </div>
@@ -373,10 +386,12 @@
 <script src="lib/jquery-2.1.4.min.js"></script>
 <script src="lib/d3.v4.min.js"></script>
 <script src="lib/imageviewer.min.js"></script>
+<script src="lib/tippy.all.min.js"></script>
 
 <script src="lib/bootstrap.min.js"></script>
 <script src="lib/share-behavior.js"></script>
 
+<script src="js/glossary.js"></script>
 <script src="js/chart.js"></script>
 <script src="js/main.js"></script>
 
@@ -402,6 +417,28 @@
         }
     });
 </script>
+
+<div id="tippy-template-list" style="display:none;">
+    <div class="tippy-template" data-template-id="follower">
+        <b>Фоловер (follower), підписник</b> –
+        людина, яка має екаунт у Твіттері, підписалася на екаунт іншої людини і стежить за її дописами. Якщо ви підписалися, скажімо, на екаунт Віктора Медведчука, то ви є “фоловером Медведчука”. Слово походить від англійського follow – слідувати, стежити
+    </div>
+
+    <div class="tippy-template" data-template-id="bot">
+        <b>Бот</b> –
+        екаунт, створений за допомогою комп’ютерних програм, який також керується ними. Часто маскується під екаунт живої людини
+    </div>
+
+    <div class="tippy-template" data-template-id="account">
+        <b>Екаунт</b> –
+        (з англійської account), також вживається слово профіль – ваша сторінка у Твіттері. екаунт – не синонім слова “людина”. У соцмережі ви бачите лише екаунт, і ніколи немає впевненості, хто по той бік екрану: справжня людина – чи лише бот, який під неї маскується
+    </div>
+
+    <div class="tippy-template" data-template-id="to-follow">
+        <b>Зафоловити</b> –
+        стати чиїмось підписником (фоловером). Якщо ви підписалися у Твіттері на екаунт Порошенка, то ви його “зафоловили”.
+    </div>
+</div>
 
 </body>
 </html>

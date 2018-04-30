@@ -274,12 +274,6 @@ p {
       .quote::before {
         font-size: 7em; } }
 
-.term {
-  border-bottom: 2px dotted #cccccc;
-  cursor: help; }
-  .term:hover {
-    color: #ccc; }
-
 .sources {
   color: #BBC0BF;
   margin-top: 0.5em;
@@ -342,25 +336,18 @@ h2 span {
   font-style: normal;
   color: brown; }
 
-.disclaimer {
-  font-size: 1.3em; }
-
 .disclaimer.main-text {
   margin-top: 0; }
-
 .disclaimer h4 {
   border-top: 3px solid #383e47;
   font-weight: 600;
   padding-top: 0.5em;
   display: inline-block; }
-
-.disclaimer p, .disclaimer li, .disclaimer h5 {
-  font-size: 12px;
-  line-height: 1.5; }
-
 .disclaimer h5 {
   font-weight: 800; }
-
+.disclaimer p, .disclaimer li, .disclaimer h5 {
+  font-size: 2em;
+  line-height: 1.5; }
 .disclaimer .pointer {
   cursor: pointer;
   border-bottom: 1px dashed;
@@ -394,5 +381,31 @@ h2 span {
 
 .mobile .header {
   box-shadow: 0 0 70px 70px rgba(50, 50, 50, 0.8); }
+
+.iv-close {
+  background: black; }
+
+.term {
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: #F0FFF0; }
+
+.tippy-tooltip {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  color: #012233;
+  padding: .3rem .6rem;
+  line-height: 1.7;
+  text-align: left; }
+
+.tippy-tooltip .tippy-content {
+  /* Your styling here. Example: */ }
+
+.tippy-backdrop {
+  background-color: #F0FFF0; }
 
 /*# sourceMappingURL=application.css.map */

@@ -41,15 +41,6 @@ p {
   line-height: 2em;
 }
 
-.term {
-  border-bottom: 2px dotted #cccccc;
-  cursor: help;
-
-  &:hover {
-    color: #ccc;
-  }
-}
-
 .sources {
   color: #BBC0BF;
   margin-top:0.5em;
@@ -147,36 +138,36 @@ h2 span {
 }
 
 .disclaimer {
-  font-size: 1.3em;
-}
 
-.disclaimer.main-text {
-  margin-top: 0;
-}
+  &.main-text {
+    margin-top: 0;
+  }
 
-.disclaimer h4 {
-  border-top: 3px solid #383e47;
-  font-weight: 600;
-  padding-top: 0.5em;
-  display: inline-block;
-}
+  h4 {
+    border-top: 3px solid #383e47;
+    font-weight: 600;
+    padding-top: 0.5em;
+    display: inline-block;
+  }
 
-.disclaimer {
-  p, li, h5{
-    font-size: 12px;
+  h5 {
+    font-weight: 800;
+  }
+
+  p, li, h5 {
+    font-size: 2em;
     line-height: 1.5;
   }
+
+  .pointer {
+    cursor: pointer;
+    border-bottom: 1px dashed;
+    display: inline-block;
+  }
+
+
 }
 
-.disclaimer h5 {
-  font-weight: 800;
-}
-
-.disclaimer .pointer {
-  cursor: pointer;
-  border-bottom: 1px dashed;
-  display: inline-block;
-}
 
 .no-gutters {
   margin-right: 0;
@@ -246,15 +237,16 @@ h2 span {
 
 
 
-
-
-
 .social-icons {
   right: 55px;
 }
 
 .mobile .header {
   box-shadow: 0 0 70px 70px rgba(50,50,50,0.8)
+}
+
+.iv-close {
+  background: black;
 }
 
 //.disclaimer {
@@ -272,3 +264,37 @@ h2 span {
 //}
 
 
+.term {
+  cursor: pointer;
+
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: #F0FFF0;
+}
+
+.tippy-tooltip {
+  border-radius: 8px;
+  //border: 1px solid black;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  color: $main-text;
+
+  padding: .3rem .6rem;
+
+  line-height: 1.7;
+  text-align: left;
+}
+
+.tippy-tooltip .tippy-content {
+  /* Your styling here. Example: */
+}
+
+.tippy-backdrop {
+  background-color: #F0FFF0;
+}
+
+.tippy-popper {
+  //border: 1px solid #ccc;
+}

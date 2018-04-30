@@ -1,22 +1,32 @@
-var glossary = (function() {
-    
-    var module = {};
-    
-    var mappings;
-    
-    d3.csv("data/mappings.csv", function(err, data) {
-        if (err) throw err;
-        
-        mappings = data;
-    
-        mappings.forEach(function(d) {
-            d3.selectAll(".term." + d.id)
-                .attr("title", d.name + " — " + d.description);
+$(function () {
+    $("#tippy-template-list")
+        .find("[data-template-id]")
+        .each(function () {
+            var template_id = $(this).data("template-id");
+            var title = $("[data-template-id='" + template_id + "']").html();
 
-            tippy(".term", {animation: false, duration: 0, delay: 0, size: "big"});
+            $(".term[data-template-ref='" + template_id + "']").attr("title", title);
         });
+
+    tippy(".term", {
+        animation: false,
+        trigger: "click focus",
+        interactive: true,
+        duration: 0,
+        delay: 0,
+        distance: 15,
+        size: "big"
     });
-    
-    
-    return module;
-})();
+
+    // hide tippy on scroll
+    window.addEventListener('scroll', function () {
+        document.querySelectorAll('.tippy-popper').forEach(function (popper) {
+            const instance = popper._tippy;
+
+            if (instance.state.visible) {
+                instance.popperInstance.disableEventListeners();
+                instance.hide();
+            }
+        })
+    });
+});
