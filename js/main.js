@@ -10,6 +10,10 @@
             viewer.show(this.src);
         });
 
+        $(".clickable[data-img-src]").click(function() {
+            viewer.show($(this).data("img-src"));
+        });
+
         var searchTerm = "";
 
         $("input#chart-search-box").on("change input", function() {
