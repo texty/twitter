@@ -45,6 +45,11 @@ function twitterchart() {
                 card.append("img")
                     .attr("src", function(d){return "data/previews/" + d.login.toLowerCase() + ".jpg"});
 
+                var captions = card.append("div")
+                    .attr("class", "caption")
+                    .text(function(d){return d.login});
+
+
                 var tooltip = container.select(".fixed-tooltip");
 
                 var activeCard;
@@ -106,9 +111,24 @@ function twitterchart() {
                     term = normalize(term);
 
                     function _filter (d) {
-                        return normalize(d.login).indexOf(term) >= 0
-                            || normalize(d.chart_name).indexOf(term) >= 0
-                            || normalize(d.profile_name).indexOf(term) >= 0
+                        delete d.matched_part;
+
+                        if (normalize(d.login).indexOf(term) >= 0) {
+                            d.matched_part = d.login;
+                            return true;
+                        }
+
+                        if (normalize(d.profile_name).indexOf(term) >= 0) {
+                            d.matched_part = d.profile_name;
+                            return true;
+                        }
+
+                        if (normalize(d.chart_name).indexOf(term) >= 0) {
+                            d.matched_part = d.chart_name;
+                            return true;
+                        }
+
+                        return false;
                     }
                     
                     card.classed("hidden", function(d){return !_filter(d)});
