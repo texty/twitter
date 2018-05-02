@@ -23,7 +23,8 @@ function twitterchart() {
             if (isEscape) {
                 viewer.hide();
             }
-        };});
+        };
+    });
 
     function my(selection) {
         selection.each(function() {
