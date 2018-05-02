@@ -14,8 +14,6 @@
             viewer.show($(this).data("img-src"));
         });
 
-        var searchTerm = "";
-
         $("input#chart-search-box").on("change input", function() {
             chart.filter(this.value);
             var not_found = !$("#chart-interface-container .card").not(".hidden").size();
