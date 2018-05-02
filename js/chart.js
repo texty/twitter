@@ -91,12 +91,19 @@ function twitterchart() {
                         // dirty hack end;
 
                         if (d3.event.ctrlKey) {
-                            window.open("https://twitter.com/" + d.login, "_blank");
-                            return;
+                            return openTwitter(d.login);
                         }
 
                         viewer.hide();
                         viewer.show("data/charts/" + d.login.toLowerCase() + ".jpg");
+                    });
+
+                card.selectAll("span.login")
+                    .on("click", function(d) {
+                        if (container.classed("touch")) {
+                            openTwitter(d.login);
+                            d3.event.stopPropagation();
+                        }
                     });
 
                 tooltip.on("click", function() {
@@ -105,6 +112,13 @@ function twitterchart() {
                             viewer.hide();
                             viewer.show("data/charts/" + d.login.toLowerCase() + ".jpg");
                         })
+                });
+
+                tooltip.select("span.login").on("click", function() {
+                    if (container.classed("touch")) {
+                        openTwitter(d3.select(activeCard).datum().login);
+                        d3.event.stopPropagation();
+                    }
                 });
 
                 my.filter = function (term) {
@@ -184,7 +198,11 @@ function twitterchart() {
     function normalize(str) {
         if (!str) return "";
         return str.trim().toLowerCase().replace(/\s+/g, " ");
-    } 
+    }
+
+    function openTwitter(login) {
+        window.open("https://twitter.com/" + login, "_blank");
+    }
 
     return my;
 }
