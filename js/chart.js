@@ -84,6 +84,11 @@ function twitterchart() {
                         if (d.touchstart_counter && d.touchstart_counter < 2) return;
                         // dirty hack end;
 
+                        if (d3.event.ctrlKey) {
+                            window.open("https://twitter.com/" + d.login, "_blank");
+                            return;
+                        }
+
                         viewer.hide();
                         viewer.show("data/charts/" + d.login.toLowerCase() + ".jpg");
                     });
