@@ -273,6 +273,8 @@ h2 span {
   color: rgba(1, 34, 51, 0.56);
   line-height: 1.5;
 
-
-
+  span.username {
+    color: #0CB3FF;
+    text-decoration: underline;
+  }
 }
