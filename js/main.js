@@ -43,6 +43,9 @@
             }
         };
 
+        // Brutal hack revert:
+        return;
+        
         
         // Fix - close popup on touch out of the chart container
         // E.g. when starting search tooltip must not be shown
