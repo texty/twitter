@@ -27,6 +27,8 @@ function twitterchart() {
     });
 
     function my(selection) {
+        my.hide_popup = function() {};
+
         selection.each(function() {
 
             var container = d3.select(this);
@@ -147,7 +149,12 @@ function twitterchart() {
                     
                     card.classed("hidden", function(d){return !_filter(d)});
                 };
-                
+
+                my.hide_popup = function() {
+                    tooltip.classed("hidden", true);
+                    card.classed("bordered", false);
+                    card.each(function(d) {delete d.touchstart_counter});
+                };
 
                 function mouseenter(d) {
                     activeCard = this;

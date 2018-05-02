@@ -43,6 +43,22 @@
             }
         };
 
+        
+        // Fix - close popup on touch out of the chart container
+        // E.g. when starting search tooltip must not be shown
+        //
+        $("body").on("click", function(e) {
+            if (e.target.id == 'chart-interface-container') {
+                chart.hide_popup();
+                return false;
+            }
+
+            if (!$(e.target).closest('#chart-interface-container, #iv-container').length) {
+                chart.hide_popup();
+            }
+            return false;
+        });
+        
     });
 })();
 
