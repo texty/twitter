@@ -24,6 +24,7 @@
 
         searchbox.on("focusin", function() {
             $("#chart-interface-container").toggleClass("show-captions", true);
+            chart.hide_popup();
         });
 
         searchbox.on("focusout", function() {
