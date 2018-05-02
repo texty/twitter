@@ -55,8 +55,9 @@
 
             if (!$(e.target).closest('#chart-interface-container, #iv-container').length) {
                 chart.hide_popup();
+                return false;
             }
-            return false;
+            
         });
         
     });
