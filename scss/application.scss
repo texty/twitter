@@ -195,6 +195,7 @@ h2 span {
     font-style: italic;
     max-width: 670px;
     margin: 0 auto;
+    ;line-height: 1.7;
   }
 
   &.clickable {
@@ -262,4 +263,8 @@ h2 span {
 
 .tippy-popper {
   //border: 1px solid #ccc;
+}
+
+.pink-dots {
+  color: #E60DBC;
 }
