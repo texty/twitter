@@ -33,13 +33,13 @@ $card_size: 100px;
       left: 11px;
       bottom: 12px;
       color: $main-text;
-      display: none;
+      opacity: 0.7
     }
   }
 
   &.show-captions {
     .card .caption {
-      display: block;
+      opacity: 1;
     }
   }
 

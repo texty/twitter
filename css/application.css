@@ -221,9 +221,9 @@ p {
       left: 11px;
       bottom: 12px;
       color: #012233;
-      display: none; }
+      opacity: 0.7; }
   #chart-interface-container.show-captions .card .caption {
-    display: block; }
+    opacity: 1; }
   #chart-interface-container .fixed-tooltip {
     position: absolute;
     width: 200px;
