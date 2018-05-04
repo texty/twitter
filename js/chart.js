@@ -33,9 +33,14 @@ function twitterchart() {
 
             var container = d3.select(this);
 
-            d3.csv("data/replacements.csv", function(err, data) {
+            d3.csv("data/twitter_data.csv", function(err, data) {
                 if (err) throw err;
                 
+                data = data.filter(function(d){
+                    return +d.followers > 10000
+                        && (!d.comment || d.comment.trim().length == 0)
+                }).sort(function(a,b){return a.followers - b.followers});
+
                 card = container
                     .selectAll("div.card")
                     .data(data)
