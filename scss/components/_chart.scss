@@ -114,6 +114,7 @@ input#chart-search-box[type=text] {
 #chart-switch {
   margin-top: 20px;
   font-size: 2em;
+  display: inline-block;
 }
 
 .nav-pills {
@@ -129,11 +130,8 @@ input#chart-search-box[type=text] {
   }
 
   a, a:focus, a:hover {
-    //background-color: #32CCFE;
     color: $main_text;
   }
-
-
 }
 
 
