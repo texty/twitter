@@ -265,6 +265,23 @@ input#chart-search-box[type=text] {
   input#chart-search-box[type=text].not-found {
     background-color: #ffc1c1; }
 
+#chart-switch {
+  margin-top: 20px;
+  font-size: 2em; }
+
+.nav-pills > li.active a, .nav-pills > li.active a:focus, .nav-pills > li.active a:hover {
+  background-color: #32CCFE;
+  color: #012233; }
+.nav-pills > li > a {
+  border: 1px #ccc dotted; }
+.nav-pills a, .nav-pills a:focus, .nav-pills a:hover {
+  color: #012233; }
+
+::after, ::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
 body {
   height: 100vh;
   margin-top: 0;

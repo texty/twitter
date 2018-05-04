@@ -39,7 +39,7 @@ function twitterchart() {
                 data = data.filter(function(d){
                     return +d.followers > 10000
                         && (!d.comment || d.comment.trim().length == 0)
-                }).sort(function(a,b){return a.followers - b.followers});
+                }).sort(function(a,b){return b.followers - a.followers});
 
                 card = container
                     .selectAll("div.card")

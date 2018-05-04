@@ -14,23 +14,37 @@
             viewer.show($(this).data("img-src"));
         });
 
-        var searchbox = $("input#chart-search-box");
-        searchbox.on("change input", function() {
-            chart.filter(this.value);
-            var not_found = !$("#chart-interface-container .card").not(".hidden").size();
+        // var searchbox = $("input#chart-search-box");
+        // searchbox.on("change input", function() {
+        //     chart.filter(this.value);
+        //     var not_found = !$("#chart-interface-container .card").not(".hidden").size();
+        //
+        //     $(this).toggleClass("not-found", not_found);
+        // });
+        //
+        // searchbox.on("focusin", function() {
+        //     $("#chart-interface-container").toggleClass("show-captions", true);
+        //     chart.hide_popup();
+        // });
+        //
+        // searchbox.on("focusout", function() {
+        //     if (this.value.length <= 0) $("#chart-interface-container").toggleClass("show-captions", false);
+        // });
 
-            $(this).toggleClass("not-found", not_found);
+        $('#chart-switch').find(' > li > a').click(function (e) {
+            e.preventDefault();
+            $(this).tab('show');
+
+            var group = $(this).data("group");
+            console.log(group);
+
+            d3.selectAll("#chart-interface-container .card")
+                .classed("hidden", function(d) {
+                    return !group ? false : d.group != group;
+                })
         });
 
-        searchbox.on("focusin", function() {
-            $("#chart-interface-container").toggleClass("show-captions", true);
-            chart.hide_popup();
-        });
 
-        searchbox.on("focusout", function() {
-            if (this.value.length <= 0) $("#chart-interface-container").toggleClass("show-captions", false);
-        });
-        
         document.onkeydown = function(evt) {
             evt = evt || window.event;
             var isEscape = false;
