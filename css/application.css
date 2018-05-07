@@ -389,6 +389,17 @@ h2 span {
   border-bottom: 1px dashed;
   display: inline-block; }
 
+.common-pub {
+  margin-top: 12px;
+  margin-left: 140px;
+  padding-left: 14px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 398px;
+  font-size: 12px;
+  line-height: 1.5;
+  background-color: #d8eaf4; }
+
 .no-gutters {
   margin-right: 0;
   margin-left: 0; }
