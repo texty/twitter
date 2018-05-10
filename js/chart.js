@@ -102,7 +102,8 @@ function twitterchart() {
                         }
 
                         viewer.hide();
-                        viewer.show("data/charts/" + d.login.toLowerCase() + ".jpg");
+                        var folder = $(window).width() >= 800 ? "data/charts/" : "data/mobile/";
+                        viewer.show(folder + d.login.toLowerCase() + ".jpg");
                     });
 
                 card.selectAll("span.login")
@@ -117,7 +118,8 @@ function twitterchart() {
                     d3.select(activeCard)
                         .each(function(d) {
                             viewer.hide();
-                            viewer.show("data/charts/" + d.login.toLowerCase() + ".jpg");
+                            var folder = $(window).width() >= 800 ? "data/charts/" : "data/mobile/";
+                            viewer.show(folder + d.login.toLowerCase() + ".jpg");
                         })
                 });
 
